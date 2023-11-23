@@ -5,6 +5,11 @@ import { Medal } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import MainImage from "./_components/main-image";
+import Image from "next/image";
+import MainGroup from "./_components/main-group";
+import MainStore from "./_components/main-store";
+import MainWriting from "./_components/main-writing";
 
 const headingFont = localFont({
     src: "../../public/fonts/font.woff2"
@@ -25,30 +30,27 @@ const textFont = Poppins({
     ]
 })
 
-const MarketingPage = () => {
+const MainPage = () => {
     return (
         <div className="flex items-center justify-center flex-col">
-            <div className={cn(
-                "flex items-center justify-center flex-col", headingFont.className,
-                )}>
-                <div className="mb-4 flex items-center border shadow-sm p-4 bg-amber-100 text-amber-700 rounded-full uppercase">
-                    <Medal className="h-6 w-6 mr-2"/>
-                    No 1 task management
-                </div>
-                <h1 className="text-3xl md:text-6xl text-center text-neutral-800 mb-6">Tasify helps team move</h1>
-                <div className="text-3xl md:text-6xl bg-gradient-to-r from-fuchsia-600 to-pink-600 text-white px-4 p-2 rounded-md pb-4 w-fit">work forward.</div>
-            </div>
+            {/* 상단 고정 배너, 추후 슬라이드 */}
+            <MainImage/>
+            {/* 내가 속한 그룹 보여주기 */}
+            <MainGroup/>
 
-            <div className={cn("text-sm md:text-xl text-neutral-400 mt-4 max-w-xs md:max-w-2xl text-center mx-auto", textFont.className,)}>
-                Collaborate, manage projects, and reach new productivity peaks. From high rises to the home office, the way your team works is unique - accomplish it all with Taskify.
-            </div>
-            <Button className="mt-6" size="lg" asChild>
-                <Link href="/sign-up"> 
-                    Get Taskify for free    
-                </Link>
-            </Button>
+            {/* <hr className="w-full max-w-screen-xl h-px bg-gray-500 border " /> */}
+            
+            {/* 최근 추가된 샵 */}
+            <MainStore/>
+
+            {/* <hr className="w-full max-w-screen-xl h-px bg-gray-500 border " /> */}
+
+             {/* 새 소식 & 커뮤니티 */}
+            <MainWriting/>
+             
+
         </div>
     )
 }
 
-export default MarketingPage;
+export default MainPage;

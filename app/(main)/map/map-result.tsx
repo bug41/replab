@@ -40,7 +40,8 @@ export const MapResult = () => {
                         </div>
                         <div className="flex mb-1 items-center">
                             <Info size={18}/>
-                            <p className="pl-2">평점/리뷰 ★★★★☆ / 90 건</p>
+                            <p className="pl-2">평점 ★★★★☆</p>
+                            <p className="pl-2">리뷰 31</p>
                         </div>                            
                     </div>
                     <div className="flex items-center gap-2">

@@ -10,7 +10,7 @@ const MarketingLayout = ({
         <div className="">
             {/* Navbar */}
             <Navbar/>
-            <main className="pt-20 pb-20 mx-auto items-center w-full">
+            <main className="mx-auto items-center w-full pb-40">
                 {children}
             </main>
             {/* Footer */}

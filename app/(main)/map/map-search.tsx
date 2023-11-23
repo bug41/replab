@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button"
 
 export const MapSearch = () => {
     return (
-        <div className="mx-auto max-w-fit pt-10">
+        <div className="mx-auto max-w-fit pt-10 px-10">
             <div className="flex gap-x-2">
                 <Select>
                     <SelectTrigger className="w-[180px]">
